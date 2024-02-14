@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Effective Mobile ( TR )</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="image_id">cbf0c984-7c6c-4ada-82da-e29dc698bb50</string>
+    <string name="not_found">not found</string>
+
+    <string-array name="sort" translatable="false">
+        <item>по популярности</item>
+        <item>самые дешевые</item>
+        <item>самые дорогие</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.login.LoginFragment">
+
+    <TextView
+        android:id="@+id/login_page_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вход"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnPrimary"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        tools:ignore="RtlSymmetry"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_name_layout"
+        style="?attr/textInputFilledStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="230dp"
+        android:background="@drawable/edit_text_bg"
+        app:endIconCheckable="true"
+        app:endIconMode="clear_text"
+        app:layout_constraintTop_toBottomOf="@id/login_page_title_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:background="@android:color/transparent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_surname_layout"
+        style="?attr/textInputFilledStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_bg"
+        app:endIconCheckable="true"
+        app:endIconMode="clear_text"
+        app:layout_constraintTop_toBottomOf="@id/login_name_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/surname_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Фамилия"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:background="@android:color/transparent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_pn_layout"
+        style="?attr/textInputFilledStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_bg"
+        app:endIconCheckable="true"
+        app:prefixText="+7"
+        app:endIconMode="clear_text"
+        app:layout_constraintTop_toBottomOf="@id/login_surname_layout">
+
+        <com.santalu.maskedittext.MaskEditText
+            android:id="@+id/phone_number_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Номер телефона"
+            android:inputType="phone"
+            app:met_mask="###-###-##-##"
+            android:imeOptions="actionDone"
+            tools:ignore="HardcodedText"
+            android:backgroundTint="@android:color/transparent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/sign_in_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Войти"
+        android:paddingStart="16dp"
+        android:enabled="false"
+        android:textAlignment="center"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/sign_in_btn_bg"
+        tools:ignore="RtlSymmetry"
+        app:layout_constraintTop_toBottomOf="@id/login_pn_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/privacy_and_policy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Нажимая кнопку “Войти”, Вы принимаете"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/underline_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="условия программы лояльности"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/text_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/hello_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello world"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

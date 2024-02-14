@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/home"
+        android:title="Главная"
+        android:icon="@drawable/type_home__state_default"/>
+
+    <item
+        android:id="@+id/catalog"
+        android:title="Каталог"
+        android:icon="@drawable/type_catalog__state_default"/>
+
+    <item
+        android:id="@+id/basket"
+        android:title="Корзинка"
+        android:icon="@drawable/type_bag__state_default"/>
+
+    <item
+        android:id="@+id/discount"
+        android:title="Акции"
+        android:icon="@drawable/type_discount__state_default"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Профиль"
+        android:icon="@drawable/type_account__state_default"/>
+
+</menu>

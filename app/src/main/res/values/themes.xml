@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EffectiveMobileTR" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorTertiary">@color/gray</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!--        Status Bar Color        -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+
+<!--    FAB Custom Shape    -->
+    <style name="FloatingActionButtonStyle" parent="Widget.Design.FloatingActionButton">
+
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlayExtended</item>
+
+    </style>
+
+    <style name="ShapeAppearanceOverlayExtended" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+
+        <item name="cornerSize">20%</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+
+    </style>
+
+    <style name="Theme.EffectiveMobileTR" parent="Base.Theme.EffectiveMobileTR"/>
+
+</resources>
